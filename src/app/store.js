@@ -1,8 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import logger from 'redux-logger';
+import { farmstandsReducer } from '../features/farmstands/farmstandsSlice';
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    farmstands: farmstandsReducer,
   },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat([logger])
 });

@@ -1,56 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+import { Routes, Route } from 'react-router-dom';
+import ContactPage from './pages/ContactPage';
+import AboutPage from './pages/AboutPage';
+import HomePage from './pages/HomePage';
+import FarmstandsPage from './pages/FarmstandsPage';
+import FarmstandDetailPage from './pages/FarmstandDetailPage';
+import MapsPage from './pages/MapsPage';
+import Header from './components/Header';
 import './App.css';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+      <Header />
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='contact' element={<ContactPage />} />
+        <Route path='About' element={<AboutPage />} />
+        <Route path='farmstands' element={<FarmstandsPage />} />
+        <Route path='farmstands/:farmstandId' 
+        element={<FarmstandDetailPage /> } /> 
+        <Route path='maps' element={<MapsPage /> } />
+      </Routes>
+      <Footer />
     </div>
   );
 }
