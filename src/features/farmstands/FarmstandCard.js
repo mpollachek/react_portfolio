@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 const FarmstandCard = ({farmstand}) => {
   const { id, image, name } = farmstand;
   return( 
-  <Link to={`${id}`}>
+  <Link to={`../farmstands/${id}`}>
   <Card>
     <CardImg
       width='100%'

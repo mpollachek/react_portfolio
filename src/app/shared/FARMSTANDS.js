@@ -31,8 +31,8 @@ export const FARMSTANDS = [
     description:
     "Jimmy Joe's fruits are grown right here in React County.  We specialize in strawberries and blueberries.",
     products: [
-      'blueberries: $3/qt',
-      'strawberries: $2/qt'
+      'blueberries',
+      'strawberries'
     ]
   },
   {
@@ -45,7 +45,7 @@ export const FARMSTANDS = [
     description:
     "Happy Chicks has free range chickens and the tastiest eggs in town!",
     products: [
-      'eggs: $3/doz',
+      'eggs',
     ]
   },
   {
@@ -58,8 +58,8 @@ export const FARMSTANDS = [
     description:
     "Get the best selection of local growers at our weekly farmers market",
     products: [
-      'rhubarb: $3/lb',
-      'Spinach: $1/lb'
+      'rhubarb',
+      'Spinach'
     ]
   },
   {
@@ -72,8 +72,8 @@ export const FARMSTANDS = [
     description:
     "Produce and homemade baked goods",
     products: [
-      'Blueberry Pie: $7',
-      'Watermelon: $4/ea'
+      'Blueberry Pie',
+      'Watermelon'
     ]
   }
 
