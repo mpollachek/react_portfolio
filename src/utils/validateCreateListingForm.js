@@ -1,13 +1,13 @@
 export const validateCreateListingForm = (values) => {
-  const { name } = values;
+  const { farmstandName } = values;
   const errors = {};
 
-  if (!name) {
-    errors.name = 'Required';
-  } else if (name.length < 2) {
-    errors.name = 'Must be at least 2 characters';
-  } else if (name.length > 30) {
-    errors.name = 'Must be 30 characters or less';
+  if (!farmstandName) {
+    errors.farmstandName = 'Required';
+  } else if (farmstandName.length < 2) {
+    errors.farmstandName = 'Must be at least 2 characters';
+  } else if (farmstandName.length > 30) {
+    errors.farmstandName = 'Must be 30 characters or less';
   }
 
   // if (!lastName) {
