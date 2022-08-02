@@ -45,22 +45,7 @@ const CreateListingForm = () => {
             />
           </Col>
         </FormGroup>
-        {/* <FormGroup row>
-          <Label htmlFor="products">Products For Sale</Label>
-          <Col>
-            <Field className="form-control" name="products[0]" md="3" />
-            <Field className="form-control" name="products[1]" md="3" />
-            <Field className="form-control" name="products[2]" md="3" />
-            <Field className="form-control" name="products[3]" md="3" />
-            <Field className="form-control" name="products[4]" md="3" />
-            <Field className="form-control" name="products[5]" md="3" />
-            <Field className="form-control" name="products[6]" md="3" />
-            <Field className="form-control" name="products[7]" md="3" />
-            <Field className="form-control" name="products[8]" md="3" />
-            <Field className="form-control" name="products[9]" md="3" />
-            <Field className="form-control" name="products[10]" md="3" />
-          </Col>
-        </FormGroup> */}
+
         <FormGroup row className='form-control'>
           <label htmlFor="products">Products For Sale</label>
           <Col>
@@ -103,7 +88,7 @@ const CreateListingForm = () => {
         <FormGroup row>
           <Col md={{ size: 10, offset: 2 }}>
             <Button type="submit" color="primary">
-              Send Feedback
+              Post Farmstand
             </Button>
           </Col>
         </FormGroup>

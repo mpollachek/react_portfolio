@@ -91,7 +91,7 @@ function Map() {
         </Button>
       </Control>
       <Control prepend position="bottomleft">
-        <FormModal form={<CreateListingForm />} />
+        <FormModal form={<CreateListingForm />} modalButton='Share A Farmstand'  />
       </Control>
     </MapContainer>
   );

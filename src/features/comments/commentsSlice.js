@@ -80,6 +80,6 @@ export const { addComment } = commentsSlice.actions;
 
 export const selectCommentsByFarmstandId = (farmstandId) => (state) => {
   return state.comments.commentsArray.filter(
-    (comment) => comment.campsiteId === parseInt(campsiteId)
+    (comment) => comment.farmstandId === parseInt(farmstandId)
   );
 };

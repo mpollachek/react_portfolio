@@ -3,7 +3,7 @@ import { Container, Row } from 'reactstrap';
 import { useParams } from 'react-router-dom';
 import { selectFarmstandsById } from '../features/farmstands/farmstandsSlice';
 import FarmstandDetail from '../features/farmstands/FarmstandDetail';
-// import CommentsList
+import CommentsList from '../features/comments/CommentList';
 import SubHeader from '../components/SubHeader';
 import FarmstandProducts from '../features/farmstands/FarmstandProducts';
 
@@ -16,8 +16,7 @@ const FarmstandDetailPage = () => {
       <SubHeader current={farmstand.name} detail={true} />
       <Row>
         <FarmstandDetail farmstand={farmstand} />
-        {/* <FarmstandProducts farmstand={farmstand}/> */}
-        {/* CommentsList farmstandId={farmstandId} */}
+        <CommentsList farmstandId={farmstandId} />
       </Row>
     </Container>
   );
