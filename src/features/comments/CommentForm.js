@@ -12,14 +12,14 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import { validateCommentForm } from "../../utils/validateCommentForm";
 import { postComment } from "./commentsSlice";
 
-const CommentForm = ({ campsiteId }) => {
+const CommentForm = ({ farmstandId }) => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const dispatch = useDispatch();
 
   const handleSubmit = (values) => {
     const comment = {
-      campsiteId: parseInt(campsiteId),
+      farmstandId: parseInt(farmstandId),
       rating: values.rating,
       author: values.author,
       text: values.commentText,

@@ -8,8 +8,19 @@ import MapsPage from './pages/MapsPage';
 import Header from './components/Header';
 import './App.css';
 import Footer from './components/Footer';
+import { useEffect } from 'react';
+import { useDispatch } from "react-redux";
+import { fetchComments } from './features/comments/commentsSlice';
+import { fetchFarmstands } from './features/farmstands/farmstandsSlice';
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+      dispatch(fetchFarmstands());
+      dispatch(fetchComments());
+  }, [dispatch]);
+  
   return (
     <div className="App">
       <Header />
