@@ -9,19 +9,19 @@ import Loading from '../../components/Loading';
 const CommentsList = ({ farmstandId }) => { 
   const comments = useSelector(selectCommentsByFarmstandId(farmstandId));
   
-  const isLoading = useSelector((state) => state.comments.isLoading);
-  const errMsg = useSelector((state) => state.comments.errMsg);
-  if (isLoading) {
-    return (
-      <Loading />
-    );
-}
+//   const isLoading = useSelector((state) => state.comments.isLoading);
+//   const errMsg = useSelector((state) => state.comments.errMsg);
+//   if (isLoading) {
+//     return (
+//       <Loading />
+//     );
+// }
 
-if (errMsg) {
-    return (
-            <Error errMsg={errMsg} />
-    );
-}
+// if (errMsg) {
+//     return (
+//             <Error errMsg={errMsg} />
+//     );
+// }
 
   if (comments && comments.length > 0) {
       return (

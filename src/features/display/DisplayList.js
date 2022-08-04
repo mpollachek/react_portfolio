@@ -22,9 +22,9 @@ const DisplayList = () => {
         }
 
         return (
-          featuredItem && (
+          item && (
             <Col md className='m-1' key={idx}>
-            <AnimatedDisplayCard item={featuredItem} />
+            <AnimatedDisplayCard item={item} />
             </Col>
           )
         );

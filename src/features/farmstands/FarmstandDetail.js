@@ -1,4 +1,3 @@
-import { produceWithPatches } from 'immer';
 import { Card, CardImg, CardText, CardBody, Col, CardTitle, CardSubtitle} from 'reactstrap';
 
 const FarmstandDetail = ({farmstand}) => {

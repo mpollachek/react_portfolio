@@ -8,15 +8,15 @@ import Loading from '../../components/Loading';
 const FarmstandsList = () => {
   const farmstands = useSelector(selectAllFarmstands);
   console.log("farmstands:", farmstands);
-  const isLoading = useSelector((state) => state.farmstands.isLoading);
-  const errMsg = useSelector((state) => state.farmstands.errMsg);
-  if (isLoading) {
-    return <Loading />;
-  }
+  // const isLoading = useSelector((state) => state.farmstands.isLoading);
+  // const errMsg = useSelector((state) => state.farmstands.errMsg);
+  // if (isLoading) {
+  //   return <Loading />;
+  // }
 
-  if (errMsg) {
-    return <Error errMsg={errMsg} />;
-  }
+  // if (errMsg) {
+  //   return <Error errMsg={errMsg} />;
+  // }
 
   return (
     <Row className="ms-auto">
