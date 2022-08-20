@@ -20,7 +20,7 @@ const MultipleFileUpload = () => {
   };
   return (
     <Dropzone
-      style={{ minWidth: "550px" }}
+      style={{ minWidth: "200px" }}
       //view={"list"}
       onChange={updateFiles}
       minHeight="195px"

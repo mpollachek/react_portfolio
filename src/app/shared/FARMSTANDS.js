@@ -24,7 +24,7 @@ export const FARMSTANDS = [
   {
     id: 0,
     name: "Jimmy Joe's",
-    image: produce_market_1,
+    image: [produce_market_1],
     latitude: '40.13',
     longitude: '-76.01',
     featured: false,
@@ -38,7 +38,7 @@ export const FARMSTANDS = [
   {
     id: 1,
     name: "Happy Chicks",
-    image: farm_animals_2,
+    image: [farm_animals_2],
     latitude: '40.04',
     longitude: '-76.31',
     featured: true,
@@ -51,7 +51,7 @@ export const FARMSTANDS = [
   {
     id: 2,
     name: "Peaceful Valley Market",
-    image: produce_market_7,
+    image: [produce_market_7],
     latitude: '41.05',
     longitude: '-76.39',
     featured: true,
@@ -65,7 +65,7 @@ export const FARMSTANDS = [
   {
     id: 3,
     name: "Jenny's Goods",
-    image: homemade_goods_1,
+    image: [homemade_goods_1],
     latitude: '40.56',
     longitude: '-76.14',
     featured: false,

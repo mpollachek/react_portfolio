@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
     Navbar,
     NavbarBrand,
@@ -7,18 +7,27 @@ import {
     Nav,
     NavItem
 } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Switch, useNavigate } from 'react-router-dom';
 import SheepLogo from '../app/assets/img/sheep.jpg';
-//import UserLoginForm from '../features/user/UserLoginForm';
+import { auth } from '../firebase.config';
+import { useSelector, useDispatch } from 'react-redux';
+import { selectCurrentUser, setCurrentUser } from '../user/userSlice';
+import './header.css';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const user = useSelector(selectCurrentUser);
+  console.log("user: " + user)
 
   return (
     <Navbar dark color='primary' sticky='top' expand='md'>
       <NavbarBrand className='ms-5' href='/'>
           <img src={SheepLogo} alt='AllFarms logo' className='float-start'/>
-          <h1 className='mt-1'>AllFarms</h1>
+          <div className='brand'>
+          <h3 className='brandname-1'>Farmstand</h3>
+          <h3 className='brandname-2'>Finder</h3>
+          </div>
       </NavbarBrand>
       <NavbarToggler onClick={() => setMenuOpen(!menuOpen)} />
       <Collapse isOpen={menuOpen} navbar>
@@ -48,8 +57,21 @@ const Header = () => {
                   <i className='fa fa-address-card fa-lg' /> Contact
               </NavLink>
           </NavItem>
+          { user &&
+          <NavItem>
+              <NavLink className='nav-link' to='/profile' active='false' >
+                  <i className='fa fa-user fa-lg' /> Profile
+              </NavLink>
+          </NavItem>
+          } 
+          { !user &&
+            <NavItem>
+              <NavLink className='nav-link' to='/sign-in' active='false' >
+                  <i className='fa fa-user fa-lg' /> Sign In
+              </NavLink>
+          </NavItem>
+          }
       </Nav>
-      {/* <UserLoginForm /> */}
       </Collapse>
   </Navbar>
   );
